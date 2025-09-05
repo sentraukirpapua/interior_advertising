@@ -3,77 +3,63 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SENTRA UKIR JAYAPURA</title></title>
+  <title></title>
   <style>
-    /* Reset & dasar */
     *, *::before, *::after { box-sizing: border-box; }
-    html, body { height: 100%; }
+    html, body { height: 100%; margin: 0; }
     body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      font-family: Arial, sans-serif;
       color: #fff;
       background: #000;
-      /* Scroll halus antar panel */
       scroll-behavior: smooth;
-      /* Aktifkan scroll-snap vertikal */
       scroll-snap-type: y mandatory;
       overflow-y: auto;
     }
 
-    /* Tiap panel = 1 foto layar penuh */
     .panel {
       position: relative;
-      height: 100vh;          /* penuh tinggi layar */
-      width: 100vw;           /* penuh lebar layar */
+      height: 100vh;
+      width: 100%;
       overflow: hidden;
-      scroll-snap-align: start; /* snap ke awal panel saat scroll */
+      scroll-snap-align: start;
       display: grid;
-      place-items: end start; /* letakkan caption di kiri-bawah */
-      isolation: isolate;
+      place-items: end start;
     }
 
-    /* Gambar memenuhi layar dengan object-fit */
+    /* Foto responsif penuh layar */
     .panel > img.bg {
       position: absolute;
-      inset: 0;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;      /* isi penuh, crop rapi */
+      object-fit: cover; /* isi penuh layar, proporsi terjaga */
       object-position: center;
       z-index: -1;
-      filter: saturate(1.05);
-      transform: scale(1.02); /* sedikit zoom untuk hindari garis kosong saat snap */
     }
 
-    /* Gradien gelap untuk baca teks */
     .fade-bottom {
       position: absolute;
-      inset: auto 0 0 0; /* hanya bagian bawah */
+      bottom: 0;
+      left: 0;
+      right: 0;
       height: 40%;
       background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.65));
       z-index: 0;
-      pointer-events: none;
     }
 
-    /* Caption di kiri bawah */
     .caption {
       position: relative;
       z-index: 1;
-      padding: 24px 24px 48px;
-      max-width: min(900px, 92vw);
+      padding: 24px;
+      max-width: 90%;
       line-height: 1.4;
-      text-shadow: 0 2px 12px rgba(0,0,0,.6);
+      text-shadow: 0 2px 8px rgba(0,0,0,.6);
     }
-    .caption h1, .caption h2 {
-      margin: 0 0 8px 0;
-      font-weight: 700;
-      letter-spacing: .2px;
-    }
-    .caption h1 { font-size: clamp(24px, 5vw, 48px); }
-    .caption h2 { font-size: clamp(18px, 3.4vw, 28px); font-weight: 600; opacity: .95; }
-    .caption p { margin: 10px 0 0; font-size: clamp(14px, 2.4vw, 18px); opacity: .9; }
 
-    /* Petunjuk scroll */
+    .caption h1 { font-size: clamp(22px, 5vw, 40px); margin: 0 0 8px; }
+    .caption p  { font-size: clamp(14px, 2.5vw, 18px); margin: 0; }
+
     .scroll-hint {
       position: fixed;
       left: 50%;
@@ -81,80 +67,43 @@
       transform: translateX(-50%);
       font-size: 14px;
       opacity: .85;
-      background: rgba(0,0,0,.35);
-      border: 1px solid rgba(255,255,255,.15);
-      border-radius: 999px;
-      padding: 8px 14px;
+      background: rgba(0,0,0,.4);
+      border-radius: 20px;
+      padding: 6px 12px;
       backdrop-filter: blur(4px);
-      user-select: none;
     }
-    .arrow { display: inline-block; animation: bounce 1.2s infinite; }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50%      { transform: translateY(4px); }
-    }
-
-    /* Tombol next/prev opsional (keyboard juga didukung) */
-    .controls { position: fixed; right: 12px; bottom: 12px; display: grid; gap: 8px; }
-    .btn {
-      appearance: none; cursor: pointer; border: none; color: #fff; background: rgba(0,0,0,.45);
-      border: 1px solid rgba(255,255,255,.15); padding: 10px 12px; border-radius: 12px;
-    }
-    .btn:hover { background: rgba(0,0,0,.6); }
+    .arrow { animation: bounce 1.2s infinite; }
+    @keyframes bounce { 0%,100% {transform: translateY(0);} 50% {transform: translateY(4px);} }
   </style>
 </head>
 <body>
-  <!-- Ganti src gambar sesuai kebutuhan. Contoh memakai placeholder Unsplash. -->
-  <section class="panel" id="satu">
+  <section class="panel">
     <img class="bg" src="https://lh3.googleusercontent.com/pw/AP1GczOv2dv6mPZcdSDYqDARAgTMpXrn6TzlWgfFaqQ7Aep6Wv55YwGwKrgh2iRw-Gpqcsmgc9nLNDlEsO6axM-tO3xBUFpR-Q7BO2Dihyiyx78AOMRTz-M=w2400?source=screenshot.guru" />
     <div class="fade-bottom"></div>
     <div class="caption">
-      <h1>Foto Layar Penuh</h1>
-      <h2>Scroll ke bawah untuk lihat foto berikutnya</h2>
-      <p>Ganti gambar di tag <code>&lt;img&gt;</code> dengan foto Anda sendiri.</p>
+      <h1></h1>
+      <p></p>
     </div>
   </section>
 
-  <section class="panel" id="dua">
-    <img class="bg" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop" alt="Foto 2" loading="lazy" />
+  <section class="panel">
+    <img class="bg" src="https://lh3.googleusercontent.com/pw/AP1GczOAn0TbpDQSQ3oOrecICPzDcFgyK4tyUxMftyeSiiK_iiKxA7vIDvA38b9nwbPMPVfexkdDlvu-r7pr5Py4sqca8lljuljNEFyGx8n-q4scGrGjGJY=w2400?source=screenshot.guru" />
     <div class="fade-bottom"></div>
     <div class="caption">
-      <h1>Panel Kedua</h1>
-      <p>Setiap panel berukuran <strong>100vh</strong> (full tinggi layar) dan snap saat scroll.</p>
+      <h1></h1>
+      <p></p>
     </div>
   </section>
 
-  <section class="panel" id="tiga">
-    <img class="bg" src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1920&auto=format&fit=crop" alt="Foto 3" loading="lazy" />
+  <section class="panel">
+    <img class="bg" src="<a href="https://lh3.googleusercontent.com/pw/AP1GczNqdqJNHfvdY0Vdy9Xkswszs_T-CjKPLEzRZveTNarEpMCcbIK25dJIB7OSQpcIdT5rWzDZJl7aCW5rrcKznaLhSONRHjVxohvFArwoerFXzTvu_gk=w2400?source=screenshot.guru" />
     <div class="fade-bottom"></div>
     <div class="caption">
-      <h1>Panel Ketiga</h1>
-      <p>Tambahkan sebanyak yang Anda mau – cukup duplikasi blok <code>&lt;section class=&quot;panel&quot;&gt;...</code></p>
+      <h1></h1>
+      <p></p>
     </div>
   </section>
 
-  <!-- Petunjuk scroll & kontrol opsional -->
-  <div class="scroll-hint">Scroll untuk navigasi <span class="arrow">↓</span></div>
-  <div class="controls" aria-hidden="true">
-    <button class="btn" data-dir="up"    title="Ke atas">▲</button>
-    <button class="btn" data-dir="down"  title="Ke bawah">▼</button>
-  </div>
-
-  <script>
-    // Navigasi cepat: tombol panah & tombol di sudut
-    const panels = [...document.querySelectorAll('.panel')];
-    const goTo = (idx) => { if (idx >= 0 && idx < panels.length) panels[idx].scrollIntoView({ behavior: 'smooth' }); };
-    const currentIndex = () => {
-      const y = window.scrollY + window.innerHeight / 2;
-      return panels.findIndex(p => y >= p.offsetTop && y < p.offsetTop + p.offsetHeight);
-    };
-    addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowDown' || e.key === 'PageDown') { e.preventDefault(); goTo(currentIndex() + 1); }
-      if (e.key === 'ArrowUp'   || e.key === 'PageUp')   { e.preventDefault(); goTo(currentIndex() - 1); }
-    });
-    document.querySelectorAll('.btn').forEach(b => b.addEventListener('click', () => {
-      const dir = b.dataset.dir === 'down' ? 1 : -1; goTo(currentIndex() + dir);
-    }));
-  </script>
+  <div class="scroll-hint">Scroll untuk melihat <span class="arrow">↓</span></div>
 </body>
 </html>
