@@ -1,120 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Sentra Ukir Jayapura</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Foto Full Layar – Scroll Vertikal</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Reset & dasar */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: #FFD700; /* warna emas */
-      line-height: 1.6;
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: #fff;
+      background: #000;
+      /* Scroll halus antar panel */
+      scroll-behavior: smooth;
+      /* Aktifkan scroll-snap vertikal */
+      scroll-snap-type: y mandatory;
+      overflow-y: auto;
     }
 
-    header {
-      background-color: #222;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 3em;
-      color: #FFD700;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2em;
-      color: #ccc;
-    }
-
-    .content {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section {
-      margin-bottom: 60px;
-    }
-
-    .section h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #FFD700;
-      border-bottom: 2px solid #FFD700;
-      padding-bottom: 10px;
-    }
-
-    .section p {
-      font-size: 1em;
-      color: #eee;
-    }
-
-    .gallery {
+    /* Tiap panel = 1 foto layar penuh */
+    .panel {
+      position: relative;
+      height: 100vh;          /* penuh tinggi layar */
+      width: 100vw;           /* penuh lebar layar */
+      overflow: hidden;
+      scroll-snap-align: start; /* snap ke awal panel saat scroll */
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
+      place-items: end start; /* letakkan caption di kiri-bawah */
+      isolation: isolate;
     }
 
-    .gallery img {
+    /* Gambar memenuhi layar dengan object-fit */
+    .panel > img.bg {
+      position: absolute;
+      inset: 0;
       width: 100%;
-      border: 2px solid #FFD700;
-      border-radius: 8px;
+      height: 100%;
+      object-fit: cover;      /* isi penuh, crop rapi */
+      object-position: center;
+      z-index: -1;
+      filter: saturate(1.05);
+      transform: scale(1.02); /* sedikit zoom untuk hindari garis kosong saat snap */
     }
 
-    footer {
-      background-color: #222;
-      color: #999;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
+    /* Gradien gelap untuk baca teks */
+    .fade-bottom {
+      position: absolute;
+      inset: auto 0 0 0; /* hanya bagian bawah */
+      height: 40%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.65));
+      z-index: 0;
+      pointer-events: none;
     }
+
+    /* Caption di kiri bawah */
+    .caption {
+      position: relative;
+      z-index: 1;
+      padding: 24px 24px 48px;
+      max-width: min(900px, 92vw);
+      line-height: 1.4;
+      text-shadow: 0 2px 12px rgba(0,0,0,.6);
+    }
+    .caption h1, .caption h2 {
+      margin: 0 0 8px 0;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    .caption h1 { font-size: clamp(24px, 5vw, 48px); }
+    .caption h2 { font-size: clamp(18px, 3.4vw, 28px); font-weight: 600; opacity: .95; }
+    .caption p { margin: 10px 0 0; font-size: clamp(14px, 2.4vw, 18px); opacity: .9; }
+
+    /* Petunjuk scroll */
+    .scroll-hint {
+      position: fixed;
+      left: 50%;
+      bottom: 16px;
+      transform: translateX(-50%);
+      font-size: 14px;
+      opacity: .85;
+      background: rgba(0,0,0,.35);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 999px;
+      padding: 8px 14px;
+      backdrop-filter: blur(4px);
+      user-select: none;
+    }
+    .arrow { display: inline-block; animation: bounce 1.2s infinite; }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(4px); }
+    }
+
+    /* Tombol next/prev opsional (keyboard juga didukung) */
+    .controls { position: fixed; right: 12px; bottom: 12px; display: grid; gap: 8px; }
+    .btn {
+      appearance: none; cursor: pointer; border: none; color: #fff; background: rgba(0,0,0,.45);
+      border: 1px solid rgba(255,255,255,.15); padding: 10px 12px; border-radius: 12px;
+    }
+    .btn:hover { background: rgba(0,0,0,.6); }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>Sentra Ukir Jayapura</h1>
-    <p>Keindahan Seni Ukir dari Tanah Papua</p>
-  </header>
-
-  <div class="content">
-
-    <div class="section">
-      <h2>Tentang Kami</h2>
-      <p>Sentra Ukir Jayapura adalah pusat seni ukir khas Papua yang memadukan kearifan lokal dengan keahlian tangan seniman terbaik. Kami berkomitmen melestarikan budaya melalui karya ukiran bernilai tinggi.</p>
+  <!-- Ganti src gambar sesuai kebutuhan. Contoh memakai placeholder Unsplash. -->
+  <section class="panel" id="satu">
+    <img class="bg" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920&auto=format&fit=crop" alt="Foto 1" loading="eager" />
+    <div class="fade-bottom"></div>
+    <div class="caption">
+      <h1>Foto Layar Penuh</h1>
+      <h2>Scroll ke bawah untuk lihat foto berikutnya</h2>
+      <p>Ganti gambar di tag <code>&lt;img&gt;</code> dengan foto Anda sendiri.</p>
     </div>
+  </section>
 
-    <div class="section">
-      <h2>Galeri Karya</h2>
-      <div class="gallery">
-        <img src="foto1.jpg" alt="Ukiran 1">
-        <img src="foto2.jpg" alt="Ukiran 2">
-        <img src="foto3.jpg" alt="Ukiran 3">
-        <img src="foto4.jpg" alt="Ukiran 4">
-        <img src="foto5.jpg" alt="Ukiran 5">
-      </div>
+  <section class="panel" id="dua">
+    <img class="bg" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop" alt="Foto 2" loading="lazy" />
+    <div class="fade-bottom"></div>
+    <div class="caption">
+      <h1>Panel Kedua</h1>
+      <p>Setiap panel berukuran <strong>100vh</strong> (full tinggi layar) dan snap saat scroll.</p>
     </div>
+  </section>
 
-    <div class="section">
-      <h2>Kontak</h2>
-      <p>Email: sentraukirjayapura@example.com</p>
-      <p>WhatsApp: +62 812-3456-7890</p>
-      <p>Alamat: Jl. Ukiran Tradisional No. 1, Jayapura, Papua</p>
+  <section class="panel" id="tiga">
+    <img class="bg" src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1920&auto=format&fit=crop" alt="Foto 3" loading="lazy" />
+    <div class="fade-bottom"></div>
+    <div class="caption">
+      <h1>Panel Ketiga</h1>
+      <p>Tambahkan sebanyak yang Anda mau – cukup duplikasi blok <code>&lt;section class=&quot;panel&quot;&gt;...</code></p>
     </div>
+  </section>
 
+  <!-- Petunjuk scroll & kontrol opsional -->
+  <div class="scroll-hint">Scroll untuk navigasi <span class="arrow">↓</span></div>
+  <div class="controls" aria-hidden="true">
+    <button class="btn" data-dir="up"    title="Ke atas">▲</button>
+    <button class="btn" data-dir="down"  title="Ke bawah">▼</button>
   </div>
 
-  <footer>
-    &copy; 2025 Sentra Ukir Jayapura. Seluruh hak cipta dilindungi.
-  </footer>
-
+  <script>
+    // Navigasi cepat: tombol panah & tombol di sudut
+    const panels = [...document.querySelectorAll('.panel')];
+    const goTo = (idx) => { if (idx >= 0 && idx < panels.length) panels[idx].scrollIntoView({ behavior: 'smooth' }); };
+    const currentIndex = () => {
+      const y = window.scrollY + window.innerHeight / 2;
+      return panels.findIndex(p => y >= p.offsetTop && y < p.offsetTop + p.offsetHeight);
+    };
+    addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown' || e.key === 'PageDown') { e.preventDefault(); goTo(currentIndex() + 1); }
+      if (e.key === 'ArrowUp'   || e.key === 'PageUp')   { e.preventDefault(); goTo(currentIndex() - 1); }
+    });
+    document.querySelectorAll('.btn').forEach(b => b.addEventListener('click', () => {
+      const dir = b.dataset.dir === 'down' ? 1 : -1; goTo(currentIndex() + dir);
+    }));
+  </script>
 </body>
 </html>
