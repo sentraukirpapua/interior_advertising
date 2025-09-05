@@ -1,913 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Exo+2:wght@300;400;500;600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <link href="tooplate-neural-style.css" rel="stylesheet">
+    
+<!--
 
-    <title>Material - Material Design Bootstrap 4 Template</title>
+Tooplate 2139 Neural Portfolio
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- Meterial Icon CSS -->
-    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css">
-    <!-- Material CSS -->
-    <link rel="stylesheet" href="assets/css/material.min.css">
-    <!-- Ripples CSS -->
-    <link rel="stylesheet" href="assets/css/ripples.min.css">
-    <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <!-- Slicknav CSS -->
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
- 
+https://www.tooplate.com/view/2139-neural-portfolio
 
-    <!-- Color CSS Styles  -->
-    <link rel="stylesheet" type="text/css" href="assets/css/colors/indigo.css" media="screen" />
+Free HTML CSS Template
 
-  </head>
-  <body>
+-->
 
-    <!-- Header Start -->
-    <header id="header">
-      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar nav-bg">
-        <div class="container">
-         <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="mdi mdi-menu"></span>
-              <span class="mdi mdi-menu"></span>
-              <span class="mdi mdi-menu"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>
-          </div>
-          <div class="collapse navbar-collapse" id="main-navbar">
-            <ul class="navbar-nav mr-auto w-100 justify-content-end">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                  Home
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Pages
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="about-us.html">About Us 1</a>
-                  <a class="dropdown-item" href="about-us2.html">About Us 2</a>
-                  <a class="dropdown-item" href="team.html">Team Members</a>
-                  <a class="dropdown-item" href="services.html">Services</a>
-                  <a class="dropdown-item" href="contact-us.html">Contact Us 1</a>
-                  <a class="dropdown-item" href="contact-us2.html">Contact Us 2</a>
-                  <a class="dropdown-item" href="404.html">404</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Components
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="tab.html">Tabs</a>
-                  <a class="dropdown-item" href="alert.html">Alert</a>
-                  <a class="dropdown-item" href="accordion.html">Accordions</a>
-                  <a class="dropdown-item" href="pricing.html">Pricing Tables</a>
-                  <a class="dropdown-item" href="buttons.html">Buttons</a>
-                  <a class="dropdown-item" href="icons.html">Icons</a>
-                  <a class="dropdown-item" href="carousel.html">Carousel</a>
-                  <a class="dropdown-item" href="counter.html">Counter</a>
-                  <a class="dropdown-item" href="map.html">Google Map</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Portfolio
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="portfolio-2.html">Portfolio 2 columns</a>
-                  <a class="dropdown-item" href="portfolio.html">Portfolio 3 columns</a>
-                  <a class="dropdown-item" href="portfolio-single.html">Portfolio Single</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Blog
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="blog.html">Blog Page</a>
-                  <a class="dropdown-item" href="blog-single.html">Blog Single Page</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Contact Us
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="contact-us.html">Contact Us 1</a>
-                  <a class="dropdown-item" href="contact-us2.html">Contact Us 2</a>
-                </div>
-              </li>
-            </ul>
-            <!-- Search Box Start -->
-            <div class="search-icon">
-              <span class="open-search">
-                <i class="mdi mdi-magnify btn btn-common"></i>
-              </span>
-            </div>
-            <form role="search" class="navbar-form">
-              <div class="container">
-                <div class="row">
-                  <div class="form-group has-feedback">
-                    <input type="text" placeholder="Type and search ..." class="form-control">
-                    <div class="close"><i class="mdi mdi-close"></i></div>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <!-- Search Box End -->
-          </div>
-        </div>
-        <!-- Mobile Menu Start -->
-        <ul class="wpb-mobile-menu">
-          <li>
-            <a class="active" href="index.html">
-            Home
+</head>
+<body>
+    <canvas id="neural-bg"></canvas>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Neural Network Logo -->
+                    <circle cx="50" cy="20" r="8" fill="none" stroke="#00ffff" stroke-width="2"/>
+                    <circle cx="25" cy="50" r="8" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                    <circle cx="75" cy="50" r="8" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                    <circle cx="50" cy="80" r="8" fill="none" stroke="#ffff00" stroke-width="2"/>
+                    
+                    <!-- Connections -->
+                    <line x1="50" y1="28" x2="25" y2="42" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="50" y1="28" x2="75" y2="42" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="25" y1="58" x2="50" y2="72" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    <line x1="75" y1="58" x2="50" y2="72" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    
+                    <!-- Center node -->
+                    <circle cx="50" cy="50" r="5" fill="#00ffff"/>
+                    <line x1="50" y1="28" x2="50" y2="45" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+                    <line x1="50" y1="55" x2="50" y2="72" stroke="#ffff00" stroke-width="1" opacity="0.6"/>
+                    <line x1="33" y1="50" x2="45" y2="50" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                    <line x1="55" y1="50" x2="67" y2="50" stroke="#ff00ff" stroke-width="1" opacity="0.6"/>
+                </svg>
+                <span class="logo-text">NEURAL</span>
             </a>
-          </li>
-          <li>
-            <a href="#">
-            Pages
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a href="about-us.html">About Us 1</a>
-              </li>
-              <li>
-                <a href="about-us2.html">About Us 2</a>
-              </li>
-              <li>
-                <a href="team.html">Team Members</a>
-              </li>
-              <li>
-                <a href="services.html">Services</a>
-              </li>
-              <li>
-                  <a href="contact-us.html">Contact Us 1</a>
-              </li>
-              <li>
-                  <a href="contact-us2.html">Contact Us 2</a>
-              </li>
-              <li>
-                  <a href="404.html">404</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-            Elements
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a href="tab.html">Tabs</a>
-              </li>
-              <li>
-                <a href="alert.html">Alert</a>
-              </li>
-              <li>
-                <a href="accordion.html">Accordions</a>
-              </li>
-              <li>
-               <a href="pricing.html">Pricing Tables</a>
-              </li>
-              <li>
-                  <a href="buttons.html">Buttons</a>
-              </li>
-              <li>
-                  <a href="icons.html">Icons</a>
-              </li>
-              <li>
-                  <a href="carousel.html">Carousel</a>
-              </li>
-              <li>
-                  <a href="counter.html">Counter</a>
-              </li>
-              <li>
-                 <a href="map.html">Google Map</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-            Portfolio
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a href="portfolio-2.html">Portfolio 2 columns</a>
-              </li>
-              <li>
-                <a href="portfolio.html">Portfolio 3 columns</a>
-              </li>
-              <li>
-                <a href="portfolio-single.html">Portfolio Single</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="about.html">
-            Blog
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a href="blog.html">Blog Page</a>
-              </li>
-              <li>
-                <a href="blog-single.html">Blog Single Page</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-            Contact Us
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a href="contact-us.html">Contact Us 1</a>
-              </li>
-              <li>
-                <a href="contact-us2.html">Contact Us 2</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <!-- Mobile Menu End -->
-      </nav>
-    </header>
-    <!-- Header End -->
-
-    <!-- Call to action Section -->
-    <section class="call-to-action-section">
-      <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-md-8 col-lg-8 col-xs-12 text-left wow animated fadeInLeft" data-wow-delay=".2s">
-          <h1> </h1><br>
-              <h1>You are Trying Free Version</h1>
-              <h3>Purchase Full Version to Get All Pages and Features!</h3>
-          </div>
-          <div class="col-md-4 col-lg-4 col-xs-12 mt-4 text-right wow animated fadeInRight" data-wow-delay=".3s"><br>
-              <a href="https://rebrand.ly/material-bs4-purchase-ud" rel="nofollow" target="_blank" class="animated4 btn btn-common"><i class="material-icons mdi mdi-cart"></i> Purchase Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Call to action Section End -->
-
-    <!-- About Section -->
-    <section class="Material-about-section section-padding">
-      <div class="container">
-        <div class="row">
-          <!-- Single About -->
-          <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".2s">
-            <div class="about-single">
-              <i class="material-icons mdi mdi-layers"></i>
-              <h2 class="subtitle">Bootstrap 4</h2>
-              <p>Excepteur sint occaecat cupidatat non proidt, sunt in culpa qui.</p>
+            
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-          </div>
-          <!-- Single About -->
-          <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".3s">
-            <div class="about-single">
-              <i class="material-icons mdi mdi-cards-playing-outline"></i>
-              <h2 class="subtitle">Material Design</h2>
-              <p>Excepteur sint occaecat cupidatat non proidt, sunt in culpa qui.</p>
-            </div>
-          </div>
-          <!-- Single About -->
-          <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".4s">
-            <div class="about-single">
-              <i class="material-icons mdi mdi-alarm-check"></i>
-              <h2 class="subtitle">Fast and Clean</h2>
-              <p>Excepteur sint occaecat cupidatat non proidt, sunt in culpa qui.</p>
-            </div>
-          </div>
-          <!-- Single About -->
-          <div class="col-md-6 col-lg-3 col-xl-3 wow animated fadeInUp" data-wow-delay=".5s">
-            <div class="about-single">
-              <i class="material-icons mdi mdi-responsive"></i>
-              <h2 class="subtitle">Fully Responsive</h2>
-              <p>Excepteur sint occaecat cupidatat non proidt, sunt in culpa qui.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- About Section End -->
-
-    <!-- Welcome Section Start -->
-    <section class="welcome-section section-padding section-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-7 col-xs-12">
-            <div class="Material-tab">
-              <!-- Nav tabs -->
-              <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" href="#business" role="tab"><i class="mdi mdi-account-multiple-outline"></i></br>Business</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#startup" role="tab"><i class="mdi mdi-flash-outline"></i></br>Startup</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#agency" role="tab"><i class="mdi mdi-all-inclusive"></i></br>Agency</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#saas" role="tab"><i class="mdi mdi-cloud-outline"></i></br>SaaS</a>
-                </li>
-              </ul>
-              <!-- Tab panes -->
-              <div class="tab-content">
-                <div class="tab-pane fade show active" id="business" role="tabpanel">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt dolores quibusdam, officia sed mollitia, illo, quis, vel veniam officiis qui repellendus. Perferendis et, veritatis enim voluptatem libero consequuntur eveniet alias nesciunt fugit doloremque tempora id Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, aut ut totam quam inventore suscipit ullam nostrum quisquam corrupti nesciunt voluptas necessitatibus, ab porro cupiditate optio mollitia, expedita, omnis? Quasi.</p>
-                </div>
-                <div class="tab-pane fade" id="startup" role="tabpanel" >
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt dolores quibusdam, officia sed mollitia, illo, quis, vel veniam officiis qui repellendus. Perferendis et, veritatis enim voluptatem libero consequuntur eveniet alias nesciunt fugit doloremque tempora id Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, aut ut totam quam inventore suscipit ullam nostrum quisquam corrupti nesciunt voluptas necessitatibus, ab porro cupiditate optio mollitia, expedita, omnis? Quasi.</p>
-                </div>
-                <div  class="tab-pane fade" id="agency" role="tabpanel">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt dolores quibusdam, officia sed mollitia, illo, quis, vel veniam officiis qui repellendus. Perferendis et, veritatis enim voluptatem libero consequuntur eveniet alias nesciunt fugit doloremque tempora id Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, aut ut totam quam inventore suscipit ullam nostrum quisquam corrupti nesciunt voluptas necessitatibus, ab porro cupiditate optio mollitia, expedita, omnis? Quasi.</p>
-                </div>
-                <div class="tab-pane fade" id="saas" role="tabpanel">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt dolores quibusdam, officia sed mollitia, illo, quis, vel veniam officiis qui repellendus. Perferendis et, veritatis enim voluptatem libero consequuntur eveniet alias nesciunt fugit doloremque tempora id Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, aut ut totam quam inventore suscipit ullam nostrum quisquam corrupti nesciunt voluptas necessitatibus, ab porro cupiditate optio mollitia, expedita, omnis? Quasi.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-5 col-xs-12 welcome-column">
-            <div class="video-gallery">
-              <img class="img-fluid" src="assets/images/about/video.jpg" alt="">
-              <div class="overlay-gallery">
-                <div class="icon-holder">
-                  <div class="icon">
-                    <a href="https://www.youtube.com/watch?v=r44RKWyfcFw" class="video-popup wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s"><i class="mdi mdi-play-circle-outline"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Welcome Section End -->
-
-    <!-- Services Section -->
-    <section class="Material-service-section section-padding">
-      <div class="container">
-          <div class="row">
-            <!-- Section Titile -->
-            <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-              <h1 class="section-title">Why Choose</h1>
-            </div>
-          </div>
-          <!-- Services Widget Section -->
-          <div class="row">
-              <!-- Service Widgets -->
-              <div class="col-md-6 col-lg-4 col-xl-4 single-service-widget wow animated fadeInUp" data-wow-delay=".3s">
-                  <div class="media">
-                      <div class="media-left">
-                          <i class="material-icons pulse-shrink mdi mdi-arrange-send-backward"></i>
-                      </div>
-                      <div class="media-body">
-                          <h2 class="subtitle"><a href="#">Refreshing Design</a></h2>
-                          <p>Excepteur sint occaecat cupi datat non proidt, sunt in culpa qui offi cia deserunt</p>
-                      </div>
-                  </div>
-              </div>
-              <!-- Service Widgets -->
-              <div class="col-md-6 col-lg-4 col-xl-4 single-service-widget wow animated fadeInUp" data-wow-delay=".4s">
-                  <div class="media">
-                      <div class="media-left">
-                          <i class="material-icons pulse-shrink mdi mdi-code-tags-check"></i>
-                      </div>
-                      <div class="media-body">
-                          <h2 class="subtitle"><a href="#">Solid Bootstrap 4</a></h2>
-                          <p>Excepteur sint occaecat cupi datat non proidt, sunt in culpa qui offi cia deserunt</p>
-                      </div>
-                  </div>
-              </div>
-              <!-- Service Widgets -->
-              <div class="col-md-6 col-lg-4 col-xl-4 single-service-widget wow animated fadeInUp" data-wow-delay=".5s">
-                  <div class="media">
-                      <div class="media-left">
-                          <i class="material-icons pulse-shrink mdi mdi-grid"></i>
-                      </div>
-                      <div class="media-body">
-                          <h2 class="subtitle"><a href="#">100+ Components</a></h2>
-                          <p>Excepteur sint occaecat cupi datat non proidt, sunt in culpa qui offi cia deserunt</p>
-                      </div>
-                  </div>
-              </div>
-              <!-- Service Widgets -->
-              <div class="col-md-6 col-lg-4 col-xl-4 single-service-widget wow animated fadeInUp" data-wow-delay=".6s">
-                  <div class="media">
-                      <div class="media-left">
-                          <i class="material-icons pulse-shrink mdi mdi-update"></i>
-                      </div>
-                      <div class="media-body">
-                          <h2 class="subtitle"><a href="#">Regular Updates</a></h2>
-                          <p>Excepteur sint occaecat cupi datat non proidt, sunt in culpa qui offi cia deserunt</p>
-                      </div>
-                  </div>
-              </div>
-              <!-- Service Widgets -->
-              <div class="col-md-6 col-lg-4 col-xl-4 single-service-widget wow animated fadeInUp" data-wow-delay=".7s">
-                  <div class="media">
-                      <div class="media-left">
-                          <i class="material-icons pulse-shrink mdi mdi-speedometer"></i>
-                      </div>
-                      <div class="media-body">
-                          <h2 class="subtitle"><a href="#">Speed Optimized</a></h2>
-                          <p>Excepteur sint occaecat cupi datat non proidt, sunt in culpa qui offi cia deserunt</p>
-                      </div>
-                  </div>
-              </div>
-              <!-- Service Widgets -->
-              <div class="col-md-6 col-lg-4 col-xl-4 single-service-widget wow animated fadeInUp" data-wow-delay=".8s">
-                  <div class="media">
-                      <div class="media-left">
-                          <i class="material-icons pulse-shrink mdi mdi-shape-plus"></i>
-                      </div>
-                      <div class="media-body">
-                          <h2 class="subtitle"><a href="#">Fully Customizable</a></h2>
-                          <p>Excepteur sint occaecat cupi datat non proidt, sunt in culpa qui offi cia deserunt</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </section>
-    <!-- Services Section End -->
-
-    <!-- Call to action Section -->
-    <section class="call-to-action-section">
-      <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-md-8 col-lg-8 col-xs-12 text-left wow animated fadeInLeft" data-wow-delay=".2s">
-          <h1> </h1><br>
-              <h1>You are Trying Free Version</h1>
-              <h3>Purchase Full Version to Get All Pages and Features!</h3>
-          </div>
-          <div class="col-md-4 col-lg-4 col-xs-12 mt-4 text-right wow animated fadeInRight" data-wow-delay=".3s"><br>
-              <a href="https://rebrand.ly/material-bs4-purchase-ud" rel="nofollow" target="_blank" class="animated4 btn btn-common"><i class="material-icons mdi mdi-cart"></i> Purchase Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Call to action Section End -->
-
-    <!-- work-counter area -->
-    <section class="work-counter-section section-padding">
-        <div class="container">
-            <div class="row">
-                <!-- Single Counter -->
-                <div class="col-md-3 col-sm-6 work-counter-widget text-center wow animated fadeInUp" data-wow-delay=".2s">
-                    <div class="counter">
-                        <div class="icon"><i class="material-icons mdi mdi-check-all"></i></div>
-                        <div class="timer">347</div>
-                        <p>Projects Done</p>
-                    </div>
-                </div>
-                <!-- Single Counter -->
-                <div class="col-md-3 col-sm-6 work-counter-widget text-center wow animated fadeInUp" data-wow-delay=".3s">
-                    <div class="counter">
-                        <div class="icon"><i class="material-icons mdi mdi-clock"></i></div>
-                        <div class="timer">8896</div>
-                        <p>Working Hours</p>
-                    </div>
-                </div>
-                <!-- Single Counter -->
-                <div class="col-md-3 col-sm-6 work-counter-widget text-center wow animated fadeInUp" data-wow-delay=".4s">
-                    <div class="counter">
-                        <div class="icon"><i class="material-icons mdi mdi-account-multiple-outline"></i></div>
-                        <div class="timer">35</div>
-                        <p>Team Members</p>
-                    </div>
-                </div>
-                <!-- Single Counter -->
-                <div class="col-md-3 col-sm-6 work-counter-widget text-center wow animated fadeInUp" data-wow-delay=".5s">
-                    <div class="counter">
-                        <div class="icon"><i class="material-icons mdi mdi-sticker-emoji"></i></div>
-                        <div class="timer">233</div>
-                        <p>Happy Clients</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- work-counter area end -->
-
-    <!-- Call to action Section -->
-    <section class="call-to-action-section">
-      <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-md-8 col-lg-8 col-xs-12 text-left wow animated fadeInLeft" data-wow-delay=".2s">
-          <h1> </h1><br>
-              <h1>You are Trying Free Version</h1>
-              <h3>Purchase Full Version to Get All Pages and Features!</h3>
-          </div>
-          <div class="col-md-4 col-lg-4 col-xs-12 mt-4 text-right wow animated fadeInRight" data-wow-delay=".3s"><br>
-              <a href="https://rebrand.ly/material-bs4-purchase-ud" rel="nofollow" target="_blank" class="animated4 btn btn-common"><i class="material-icons mdi mdi-cart"></i> Purchase Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Call to action Section End -->
-    <!-- Start Client Section -->
-    <div class="client section-padding section-dark">
-      <div class="container">
-        <div class="row">
-          <div id="client-logo" class="owl-carousel">
-            <div class="client-logo item">
-              <a href="#">
-                <img class="img-fluid" src="assets/images/clients/client1.png" alt="" />
-              </a>
-            </div>
-            <div class="client-logo item">
-              <a href="#">
-                <img class="img-fluid" src="assets/images/clients/client2.png" alt="" />
-              </a>
-            </div>
-            <div class="client-logo item">
-              <a href="#">
-                <img class="img-fluid" src="assets/images/clients/client3.png" alt="" />
-              </a>
-            </div>
-            <div class="client-logo item">
-              <a href="#">
-                <img class="img-fluid" src="assets/images/clients/client4.png" alt="" />
-              </a>
-            </div>
-            <div class="client-logo item">
-              <a href="#">
-                <img class="img-fluid" src="assets/images/clients/client1.png" alt="" />
-              </a>
-            </div>
-            <div class="client-logo item">
-              <a href="#">
-                <img class="img-fluid" src="assets/images/clients/client2.png" alt="" />
-              </a>
-            </div>
-            <div class="client-logo item">
-              <a href="#">
-                <img class="img-fluid" src="assets/images/clients/client3.png" alt="" />
-              </a>
-            </div>
-            <div class="client-logo item">
-              <a href="#">
-                <img class="img-fluid" src="assets/images/clients/client4.png" alt="" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Client Section -->
-    <!-- Start Testimonial Section  -->
-    <div class="testimonial section-padding">
-      <div class="container">
-        <div class="row">
-          <!-- Testimonial section  -->
-          <div class="testimonials-carousel owl-carousel">
-            <div class="item">
-              <div class="testimonial-item">
-                <div class="datils">
-                   <h5>Adam Schwartz</h5>
-                  <span>Software Articulate, Google</span>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br> standard dummy text ever since the 1500s Lorem Ipsum.</p>
-                </div>
-                <div class="img">
-                  <a href="#"><img class="img-fluid" src="assets/images/testimonial/author1.jpg"  alt=""></a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimonial-item">
-                <div class="datils">
-                  <h5>Clark Brown</h5>
-                  <span>Brand Managerr</span>
-                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br> standard dummy text ever since the 1500s Lorem Ipsum.</p>
-                </div>
-                <div class="img">
-                  <a href="#"><img class="img-fluid"  src="assets/images/testimonial/author2.jpg"  alt=""></a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimonial-item">
-                <div class="datils">
-                  <h5>Ana Blunt</h5>
-                  <span>Creative Director</span>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br> standard dummy text ever since the 1500s Lorem Ipsum.</p>
-                </div>
-                <div class="img">
-                  <a href="#"><img class="img-fluid"  src="assets/images/testimonial/author3.jpg"  alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Testimonial Section  -->
-
-    <!-- Our BLog Section -->
-    <section class="Material-blog-section section-padding">
-      <div class="container">
-        <div class="row">
-            <!-- Section Titile -->
-            <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-                <h1 class="section-title">From The Blog</h1>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Single Article -->
-            <div class="col-md-6 col-lg-4 col-xl-4 wow animated fadeInUp" data-wow-delay=".3s">
-                <article class="single-blog-post">
-                    <!-- Featured Image -->
-                    <div class="featured-image">
-                        <a href="#">
-                            <img src="assets/images/blog/featured1.jpg" alt="">
-                        </a>
-                    </div>
-                    <!-- Post Meta -->
-                    <div class="post-meta">
-                        <!-- Title -->
-                        <a href="blog-single.html"><h2 class="subtitle">12+ Amazing Growth Hacking Tips and Tricks</h2></a>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.</p>
-                    </div>
-                    <div class="meta-tags">
-                      <span class="comments"><a href="#"><i class="mdi mdi-comment-outline"></i> 24 Comments</a></span>
-                      <!-- Read More -->
-                      <a class="btn btn-round btn-fab" href="blog-single.html"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-                    </div>
-                </article>
-            </div>
-            <!-- Single Article -->
-            <div class="col-md-6 col-lg-4 col-xl-4 wow animated fadeInUp" data-wow-delay=".4s">
-                <article class="single-blog-post">
-                    <!-- Featured Image -->
-                    <div class="featured-image">
-                        <a href="#">
-                            <img src="assets/images/blog/featured2.jpg" alt="">
-                        </a>
-                    </div>
-                    <!-- Post Meta -->
-                    <div class="post-meta">
-                        <!-- Title -->
-                        <a href="blog-single.html"><h2 class="subtitle">10 Tips to Validate Your Next Startup Idea</h2></a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.</p>
-                    </div>
-                    <div class="meta-tags">
-                      <span class="comments"><a href="#"><i class="mdi mdi-comment-outline"></i> 24 Comments</a></span>
-                      <!-- Read More -->
-                      <a class="btn btn-round btn-fab" href="blog-single.html"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-                    </div>
-                </article>
-            </div>
-            <!-- Single Article -->
-            <div class="col-md-6 col-lg-4 col-xl-4 wow animated fadeInUp" data-wow-delay=".5s">
-                <article class="single-blog-post">
-                    <!-- Featured Image -->
-                    <div class="featured-image">
-                        <a href="#">
-                            <img src="assets/images/blog/featured3.jpg" alt="">
-                        </a>
-                    </div>
-                    <!-- Post Meta -->
-                    <div class="post-meta">
-                        <!-- Title -->
-                        <a href="blog-single.html"><h2 class="subtitle">How to Create Successful Website for Your Agency</h2></a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.</p>
-                    </div>
-                    <div class="meta-tags">
-                      <span class="comments"><a href="#"><i class="mdi mdi-comment-outline"></i> 24 Comments</a></span>
-                      <!-- Read More -->
-                      <a class="btn btn-round btn-fab" href="blog-single.html"><i class="material-icons mdi mdi-arrow-right"></i><div class="ripple-container"></div></a>
-                    </div>
-                </article>
-            </div>
-        </div>
-        <div class="row mt-5 wow animated fadeInUp" data-wow-delay=".6s">
-          <!-- Button -->
-          <div class="col-md-12 text-center">
-              <a href="blog.html" class="animated4 btn btn-common" data-ripple-color="#000"><i class="material-icons mdi mdi-library-books"></i> Explore More on Blog<div class="ripple-container"></div></a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Our BLog Section End -->
-
-    <!-- Contact Us Section -->
-    <section class="Material-contact-section section-padding section-dark">
-      <div class="container">
-          <div class="row">
-              <!-- Section Titile -->
-              <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-                  <h1 class="section-title">Love to Hear From You</h1>
-              </div>
-          </div>
-          <div class="row">
-              <!-- Section Titile -->
-              <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content.</p>
-
-                <div class="find-widget">
-                  <a href="#"><i class="material-icons mdi mdi-map-marker"></i>4435 Berkshire Circle Knoxville</a>
-                </div>
-                <div class="find-widget">
-                    <a href="#"><i class="material-icons mdi mdi-phone"></i> + 879-890-9767</a>
-                </div>
-                <div class="find-widget">
-                    <a href="#"><i class="material-icons mdi mdi-email-open mr-3"></i> support@Material.com</a>
-                </div>
-                <div class="find-widget">
-                    <a href="#"><i class="material-icons mdi mdi-clock"></i> Mon to Sat: 09:30 AM - 10.30 PM</a>
-                </div>
-              </div>
-              <!-- contact form -->
-              <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
-                  <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
-                      <!-- Name -->
-                      <div class="form-group label-floating">
-                        <label class="control-label" for="name">Name</label>
-                        <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                      <!-- email -->
-                      <div class="form-group label-floating">
-                        <label class="control-label" for="email">Email</label>
-                        <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                      <!-- Subject -->
-                      <div class="form-group label-floating">
-                        <label class="control-label">Subject</label>
-                        <input class="form-control" id="msg_subject" type="text" name="subject" required data-error="Please enter your message subject">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                      <!-- Message -->
-                      <div class="form-group label-floating">
-                          <label for="message" class="control-label">Message</label>
-                          <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
-                          <div class="help-block with-errors"></div>
-                      </div>
-                      <!-- Form Submit -->
-                      <div class="form-submit mt-5">
-                          <button class="btn btn-common" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Send Message</button>
-                          <div id="msgSubmit" class="h3 text-center hidden"></div>
-                          <div class="clearfix"></div>
-                      </div>
-                  </form>
-              </div>
-          </div>
-      </div>
-    </section>
-    <!-- Contact Us Section End -->
-
-    <!--Footer-->
-    <footer class="page-footer center-on-small-only  pt-0 footer-widget-container">
-      <!--Footer Links-->
-      <div class="container pt-5 mb-5">
-        <div class="row">
-          <!--First column-->
-          <div class="col-md-6 col-lg-3 col-xl-3 footer-contact-widget">
-              <h3 class="footer-title">About</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates eos minus expedita ipsum soluta voluptatem sed architecto.</p>
-              <ul>
-                <li>
-                  <a href="#"><i class="mdi mdi-facebook"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="mdi mdi-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="mdi mdi-dribbble"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="mdi mdi-github-circle"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="mdi mdi-linkedin"></i></a>
-                 </li>
-              </ul>
-          </div>
-          <!--/.First column-->
-
-          <!--Second column-->
-          <div class="col-md-6 col-lg-3 col-xl-3 recent-widget">
-            <h3 class="footer-title">Recent Posts</h3>
-            <p><a href="#" class="dark-grey-text">Growth Hacking 101</a></p>
-            <p><a href="#" class="dark-grey-text">30 UX Tips and Tricks</a></p>
-            <p><a href="#" class="dark-grey-text">How to Scale Your Business</a></p>
-            <p><a href="#" class="dark-grey-text">Getting Started with Sketch</a></p>
-            <p><a href="#" class="dark-grey-text"></a>10 Tips to Validate Your Idea</p>
-            <p><a href="#" class="dark-grey-text">SEO Guideline for Designers</a></p>
-          </div>
-          <!--/.Second column-->
-
-          <!--Third column-->
-          <div class="col-md-6 col-lg-3 col-xl-3 link-widget">
-            <h3 class="footer-title">Quick link</h3>
-            <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="#">Brands</a></li>
-              <li><a href="portfolio-index.html">Portfolio</a></li>
-              <li><a href="#">Support</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="#">Site Map</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-            </ul>
-          </div>
-          <!--/.Third column-->
-
-          <!--Fourth column-->
-          <div class="col-md-6 col-lg-3 col-xl-3 footer-contact">
-              <h3 class="footer-title">Our Gallery</h3>
-              <div class="widget widget-gallery">
-                <ul class="magnific-gallery">
-                  <li><a href="#"><img src="assets/images/gallery/thum1.jpg" alt="instagram image"></a></li>
-                  <li><a href="#"><img src="assets/images/gallery/thum2.jpg" alt="instagram image"></a></li>
-                  <li><a href="#"><img src="assets/images/gallery/thum3.jpg" alt="instagram image"></a></li>
-                  <li><a href="#"><img src="assets/images/gallery/thum4.jpg" alt="instagram image"></a></li>
-                  <li><a href="#"><img src="assets/images/gallery/thum5.jpg" alt="instagram image"></a></li>
-                  <li><a href="#"><img src="assets/images/gallery/thum6.jpg" alt="instagram image"></a></li>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
-              </div>
-          </div>
-          <!--/.Fourth column-->
-
+            </div>
         </div>
-      </div>
-      <!--/.Footer Links-->
+    </nav>
 
-      <!-- Copyright-->
-      <div class="footer-copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p>&copy; 2020 Material Studio, All right reserved. Designed with <i class="mdi mdi-heart"></i> by <a href="#">UIdeck</a></p>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="NEURAL NETWORK">NEURAL NETWORK</h1>
+            <p class="subtitle">Web Developer & Digital Architect</p>
+        </div>
+        <a href="#about" class="scroll-btn">
+            <div class="scroll-btn-inner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                </svg>
+            </div>
+        </a>
+    </section>
+
+    <section id="about" class="fade-in">
+        <h2 class="section-title">ABOUT ME</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <div class="profile-img-wrapper">
+                    <div class="profile-img">
+                        <span>AI</span>
+                    </div>
                 </div>
             </div>
-          </div>
-      </div>
-      <!--/.Copyright -->
+            <div class="about-content">
+                <h3>Crafting Digital Experiences</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                    I'm a passionate web developer specializing in creating cutting-edge digital experiences 
+                    that merge art with technology. My work focuses on building neural network-inspired 
+                    interfaces that push the boundaries of web design.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">
+                    With over 5 years of experience in frontend development, I've mastered the art of 
+                    transforming complex ideas into intuitive, visually stunning web applications. 
+                    My expertise spans from responsive design to advanced animations and WebGL implementations.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years Exp</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">Clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="projects" class="fade-in">
+        <h2 class="section-title">PROJECTS</h2>
+        <div class="projects-grid">
+            <div class="glass-card project-card">
+                <h3 style="color: var(--primary);">AI Dashboard</h3>
+                <p style="color: var(--text-secondary);">Real-time analytics with neural network visualizations and predictive modeling</p>
+            </div>
+            <div class="glass-card project-card">
+                <h3 style="color: var(--secondary);">Quantum UI</h3>
+                <p style="color: var(--text-secondary);">Experimental interface system inspired by quantum computing principles</p>
+            </div>
+            <div class="glass-card project-card">
+                <h3 style="color: var(--accent);">Cyber Portal</h3>
+                <p style="color: var(--text-secondary);">Immersive web experience with advanced WebGL and Three.js effects</p>
+            </div>
+            <div class="glass-card project-card">
+                <h3 style="color: var(--primary);">Data Stream</h3>
+                <p style="color: var(--text-secondary);">Live data visualization platform with real-time streaming capabilities</p>
+            </div>
+            <div class="glass-card project-card">
+                <h3 style="color: var(--secondary);">Neon Grid</h3>
+                <p style="color: var(--text-secondary);">Cyberpunk-themed design system with glowing components and animations</p>
+            </div>
+            <div class="glass-card project-card">
+                <h3 style="color: var(--accent);">Matrix View</h3>
+                <p style="color: var(--text-secondary);">3D data exploration tool with virtual reality integration support</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="fade-in">
+        <h2 class="section-title">SKILLS</h2>
+        <div class="skills-container">
+            <div class="skill-node">
+                <span>HTML5</span>
+            </div>
+            <div class="skill-node">
+                <span>CSS3</span>
+            </div>
+            <div class="skill-node">
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-node">
+                <span>React</span>
+            </div>
+            <div class="skill-node">
+                <span>WebGL</span>
+            </div>
+            <div class="skill-node">
+                <span>Three.js</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2 class="section-title">CONTACT</h2>
+        <form class="contact-form glass-card">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="neural-btn">SEND MESSAGE</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">UI/UX Development</a></li>
+                    <li><a href="#">Frontend Development</a></li>
+                    <li><a href="#">Consultation</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 10px;">
+                    Let's build something amazing together
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2048 Neural Network Portfolio. All rights reserved. Provided by <a href="https://www.tooplate.com" rel="nofollow noopener">Tooplate</a></p>
+        </div>
     </footer>
-    <!--/.Footer-->
+<script src="tooplate-neural-scripts.js"></script>
 
-
-    <!-- Back To Top -->
-    <a href="#" class="back-to-top">
-      <div class="ripple-container"></div>
-      <i class="mdi mdi-arrow-up">
-      </i>
-    </a>
-
-    <!-- Preloader -->
-    <div id="preloader">
-      <div class="loader" id="loader-1"></div>
-    </div>
-    <!-- End Preloader -->
-
-    <!-- Optional JavaScript -->
-    <script src="assets/js/jquery-min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
- 
-    <script src="assets/js/jquery.mixitup.min.js"></script>
-    <script src="assets/js/jquery.inview.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/scroll-top.js"></script>
-    <script src="assets/js/smoothscroll.js"></script>
-    <script src="assets/js/material.min.js"></script>
-    <script src="assets/js/ripples.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/form-validator.min.js"></script>
-    <script src="assets/js/contact-form-script.min.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/jquery.vide.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/jquery.slicknav.js"></script>
-    <script src="assets/js/main.js"></script>
-
-  </body>
+</body>
