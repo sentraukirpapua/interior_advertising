@@ -1,181 +1,128 @@
-<!doctype html>
-<html lang="id">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Sentra CNC — Blog &amp; Portofolio</title>
-  <meta name="description" content="Blog, tutorial, portofolio dan layanan CNC Cutting, Router, Laser, Plasma untuk interior & advertising.">
-
-  <!-- Google Fonts (you can change) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg:#0f1724; /* dark navy */
-      --card:#0b1220;
-      --accent:#ffb86b; /* warm orange */
-      --muted:#94a3b8;
-      --glass: rgba(255,255,255,0.03);
-      --radius:12px;
-      color-scheme: dark;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071023 0%, #081426 100%);color:#e6eef8}
-    a{color:var(--accent);text-decoration:none}
-
-    /* page layout */
-    .container{max-width:1100px;margin:28px auto;padding:20px}
-
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff6b6b);display:flex;align-items:center;justify-content:center;font-weight:700;color:#081426}
-    .brand h1{font-size:18px;margin:0}
-    .brand p{margin:0;color:var(--muted);font-size:13px}
-
-    .nav{display:flex;gap:12px;align-items:center}
-    .nav a{padding:8px 12px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03);font-size:14px}
-
-    /* hero */
-    .hero{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:22px}
-    .hero-card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(0,0,0,0.5)}
-    .hero-card h2{margin:0 0 8px 0}
-    .hero-card p{color:var(--muted);margin:0 0 12px}
-    .cta{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#ff6b6b);color:#081426;font-weight:600}
-
-    /* posts grid */
-    .posts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
-    .post{background:var(--glass);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    .post .thumb{height:160px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));display:block;margin-bottom:10px}
-    .post h3{margin:6px 0}
-    .meta{font-size:13px;color:var(--muted)}
-
-    /* sidebar widgets */
-    .sidebar{display:flex;flex-direction:column;gap:12px}
-    .widget{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    .services li{margin-bottom:8px}
-
-    /* footer */
-    footer{margin-top:28px;padding:12px 0;color:var(--muted);text-align:center;font-size:13px}
-
-    /* responsive */
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .posts{grid-template-columns:1fr}
-      .hero .right{order:2}
-    }
-
-    /* small helpers */
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px}
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">CNC</div>
-        <div>
-          <h1>Sentra CNC</h1>
-          <p>Cutting | Router | Laser | Plasma — Jayapura</p>
+<?xml version="1.0" encoding="UTF-8" ?>
+<b:template xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:b="http://www.google.com/2005/gml/b"
+    xmlns:data="http://www.google.com/2005/gml/data"
+    xmlns:expr="http://www.google.com/2005/gml/expr">
+  <b:includable id='main'>
+    <html>
+      <head>
+        <meta charset="utf-8"/>
+        <meta content='width=device-width,initial-scale=1' name='viewport'/>
+        <title><data:blog.pageTitle/></title>
+        <b:skin><![CDATA[
+          :root{
+            --bg:#0f1724;
+            --card:#0b1220;
+            --accent:#FFD700; /* warna emas */
+            --muted:#94a3b8;
+            --glass: rgba(255,255,255,0.03);
+            --radius:12px;
+            color-scheme: dark;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+          }
+          *{box-sizing:border-box}
+          html,body{height:100%;margin:0;background:linear-gradient(180deg,#071023 0%, #081426 100%);color:#e6eef8}
+          a{color:var(--accent);text-decoration:none}
+          .container{max-width:1100px;margin:28px auto;padding:20px}
+          header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+          .brand{display:flex;align-items:center;gap:12px}
+          .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#e6c200);display:flex;align-items:center;justify-content:center;font-weight:700;color:#081426}
+          .brand h1{font-size:18px;margin:0}
+          .brand p{margin:0;color:var(--muted);font-size:13px}
+          .nav{display:flex;gap:12px;align-items:center}
+          .nav a{padding:8px 12px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03);font-size:14px}
+          .hero{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:22px}
+          .hero-card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(0,0,0,0.5)}
+          .hero-card h2{margin:0 0 8px 0}
+          .hero-card p{color:var(--muted);margin:0 0 12px}
+          .cta{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#e6c200);color:#081426;font-weight:600}
+          .posts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+          .post{background:var(--glass);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+          .post .thumb{height:160px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));display:block;margin-bottom:10px}
+          .post h3{margin:6px 0}
+          .meta{font-size:13px;color:var(--muted)}
+          .sidebar{display:flex;flex-direction:column;gap:12px}
+          .widget{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+          .services li{margin-bottom:8px}
+          footer{margin-top:28px;padding:12px 0;color:var(--muted);text-align:center;font-size:13px}
+          @media (max-width:900px){
+            .hero{grid-template-columns:1fr}
+            .posts{grid-template-columns:1fr}
+            .hero .right{order:2}
+          }
+          .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px}
+        ]]></b:skin>
+      </head>
+      <body>
+        <div class='container'>
+          <header>
+            <div class='brand'>
+              <div class='logo'>CNC</div>
+              <div>
+                <h1>SENTRA UKIR JAYAPURA</h1>
+                <p>Cutting | Router | Laser | Plasma — Jayapura</p>
+              </div>
+            </div>
+            <nav class='nav'>
+              <a expr:href='data:blog.homepageUrl'>Beranda</a>
+              <a href='#services'>Layanan</a>
+              <a href='#portfolio'>Portofolio</a>
+              <a href='#contact'>Kontak</a>
+            </nav>
+          </header>
+          <section class='hero'>
+            <div class='hero-card'>
+              <h2>Selamat datang di SENTRA UKIR JAYAPURA</h2>
+              <p>Blog & portofolio hasil potong, ukir, dan layanan finishing. Temukan tutorial, contoh pekerjaan, serta paket layanan untuk interior & advertising.</p>
+              <a class='cta' href='#portfolio'>Lihat Portofolio</a>
+              <div style='margin-top:14px;display:flex;gap:8px;flex-wrap:wrap'>
+                <span class='pill'>Tutorial</span>
+                <span class='pill'>Proyek</span>
+                <span class='pill'>Layanan</span>
+                <span class='pill'>Harga</span>
+              </div>
+              <div style='margin-top:18px'>
+                <h4>Ringkasan Layanan</h4>
+                <ul class='services' style='padding-left:18px;color:var(--muted)'>
+                  <li>Jasa cutting CNC huruf timbul & signboard</li>
+                  <li>Router untuk dekor interior dan panel</li>
+                  <li>Laser cutting & engraving</li>
+                  <li>Plasma cutting untuk logam tebal</li>
+                </ul>
+              </div>
+            </div>
+            <aside class='sidebar'>
+              <div class='widget'>
+                <h3>Hubungi Kami</h3>
+                <p class='meta'>Tel: <strong>+62 811-xxxx-xxxx</strong><br/>Email: <a href='mailto:kontak@sentracnc.co'>kontak@sentracnc.co</a></p>
+              </div>
+              <div class='widget'>
+                <h3>Jam Operasional</h3>
+                <p class='meta'>Sen–Sab, 08:00–18:00<br/>Minggu: Tutup</p>
+              </div>
+              <div class='widget'>
+                <h3>Ikuti Kami</h3>
+                <p class='meta'><a href='#'>Instagram</a> • <a href='#'>Facebook</a> • <a href='#'>YouTube</a></p>
+              </div>
+            </aside>
+          </section>
+          <main>
+            <section class='posts'>
+              <b:loop values='data:posts' var='post'>
+                <article class='post'>
+                  <a class='thumb' expr:href='data:post.url'></a>
+                  <div class='meta'><data:post.labels/></div>
+                  <h3><a expr:href='data:post.url'><data:post.title/></a></h3>
+                  <p class='meta'>Diposting <data:post.date/></p>
+                </article>
+              </b:loop>
+            </section>
+          </main>
+          <footer>
+            &copy; <data:blog.year/> SENTRA UKIR JAYAPURA — Semua hak dilindungi.
+          </footer>
         </div>
-      </div>
-
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#">Beranda</a>
-        <a href="#services">Layanan</a>
-        <a href="#portfolio">Portofolio</a>
-        <a href="#contact">Kontak</a>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <div class="hero-card">
-        <h2>Selamat datang di Sentra CNC</h2>
-        <p>Blog &amp; portofolio hasil potong, ukir, dan layanan finishing. Temukan tutorial, contoh pekerjaan, serta paket layanan untuk interior & advertising.</p>
-        <a class="cta" href="#portfolio">Lihat Portofolio</a>
-
-        <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
-          <span class="pill">Tutorial</span>
-          <span class="pill">Proyek</span>
-          <span class="pill">Layanan</span>
-          <span class="pill">Harga</span>
-        </div>
-
-        <div style="margin-top:18px">
-          <h4>Ringkasan Layanan</h4>
-          <ul class="services" style="padding-left:18px;color:var(--muted)">
-            <li>Jasa cutting CNC huruf timbul & signboard</li>
-            <li>Router untuk dekor interior dan panel</li>
-            <li>Laser cutting & engraving</li>
-            <li>Plasma cutting untuk logam tebal</li>
-          </ul>
-        </div>
-      </div>
-
-      <aside class="sidebar">
-        <div class="widget">
-          <h3>Hubungi Kami</h3>
-          <p class="meta">Tel: <strong>+62 811-xxxx-xxxx</strong><br>Email: <a href="mailto:kontak@sentracnc.co">kontak@sentracnc.co</a></p>
-        </div>
-
-        <div class="widget">
-          <h3>Jam Operasional</h3>
-          <p class="meta">Sen–Sab, 08:00–18:00<br>Minggu: Tutup</p>
-        </div>
-
-        <div class="widget">
-          <h3>Ikuti Kami</h3>
-          <p class="meta"><a href="#">Instagram</a> • <a href="#">Facebook</a> • <a href="#">YouTube</a></p>
-        </div>
-      </aside>
-    </section>
-
-    <main>
-      <section class="posts" aria-label="Daftar artikel">
-        <!-- contoh post: ganti dengan loop posting dari Blogger atau engine anda -->
-        <article class="post">
-          <div class="thumb"></div>
-          <div class="meta">Tutorial • 5 menit baca</div>
-          <h3>Memilih Material MDF yang Tepat untuk Huruf Timbul</h3>
-          <p class="meta">Posted Aug 20, 2025 — <a href="#">Selengkapnya →</a></p>
-        </article>
-
-        <article class="post">
-          <div class="thumb"></div>
-          <div class="meta">Proyek • Portofolio</div>
-          <h3>Proyek Panel Dekoratif Café — Finishing Natural</h3>
-          <p class="meta">Posted Jul 10, 2025 — <a href="#">Selengkapnya →</a></p>
-        </article>
-
-        <article class="post">
-          <div class="thumb"></div>
-          <div class="meta">Tips • 3 menit baca</div>
-          <h3>5 Pengaturan Mesin CNC untuk Permukaan Halus</h3>
-          <p class="meta">Posted Jun 2, 2025 — <a href="#">Selengkapnya →</a></p>
-        </article>
-
-        <article class="post">
-          <div class="thumb"></div>
-          <div class="meta">Service</div>
-          <h3>Paket Layanan: Huruf Timbul + Pemasangan</h3>
-          <p class="meta">Harga mulai dari Rp 350.000 — <a href="#contact">Hubungi</a></p>
-        </article>
-      </section>
-
-      <!-- more content or pagination could go here -->
-    </main>
-
-    <footer>
-      &copy; 2025 Sentra CNC — Semua hak dilindungi. Template ringan dan responsif untuk blog tentang CNC machine.
-    </footer>
-  </div>
-
-  <!-- NOTES: Untuk digunakan sebagai tema Blogger, Anda bisa:
-       1) Masuk ke Dashboard Blogger > Tema > Edit HTML
-       2) Jika ingin menggunakan template ini langsung, Anda harus menyesuaikan struktur XML & <b:section> Blogger.
-       3) Alternatif: gunakan HTML ini sebagai basis landing page statis di Hosting / GitHub Pages.
-
-       Butuh versi yang sudah dikonversi ke template Blogger (XML + widget)? Saya bisa konversi otomatis jika Anda mau.
-  -->
-</body>
-</html>
+      </body>
+    </html>
+  </b:includable>
+</b:template>
